@@ -4,6 +4,11 @@ img.img-thumbnail {
   margin-bottom: 2px;
 }
 
+.nv-filedrop {
+  transition: all 0.3s;
+  border: dotted 3px white;
+}
+
 .nv-file-over {
   border: dotted 3px red;
 }

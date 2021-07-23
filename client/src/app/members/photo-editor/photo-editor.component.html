@@ -11,13 +11,13 @@
         (click)="setMainPhoto(photo)"
         [ngClass]="photo.isMain ? 'btn-success active' : 'btn-outline-success'"
         class="btn btn-sm"
-      >
+        >
         Main
       </button>
       <button
         [disabled]="photo.isMain"
         (click)="deletePhoto(photo.id)"
-        class="btn btn-danger"
+        class="btn btn-danger btn-sm"
       >
         <i class="fa fa-trash"></i>
       </button>
@@ -31,10 +31,10 @@
 
     <div
       ng2FileDrop
+      class="card bg-faded p-3 text-center mb-3 my-drop-zone nv-filedrop"
       [ngClass]="{ 'nv-file-over': hasBaseDropzoneOver }"
       (fileOver)="fileOverBase($event)"
       [uploader]="uploader"
-      class="card bg-faded p-3 text-center mb-3 my-drop-zone"
     >
       <i class="fa fa-upload fa-3x"></i>
       Drop photos here
