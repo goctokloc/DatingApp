@@ -53,11 +53,13 @@ export class RegisterComponent implements OnInit {
         [Validators.required, this.matchValues('password')],
       ],
     });
-    this.registerForm.controls.password.valueChanges.subscribe(() => {
+    this.registerForm.controls.password.valueChanges.toPromise().then(() => {
       this.registerForm.controls.confirmPassword.updateValueAndValidity();
     });
   }
-
+  // this.registerForm.controls.password.valueChanges.subscribe(() => {
+  //   this.registerForm.controls.confirmPassword.updateValueAndValidity();
+  // });
   matchValues(matchTo: string): ValidatorFn {
     return (control: AbstractControl) => {
       return control?.value === control?.parent?.controls[matchTo].value
