@@ -23,6 +23,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@kolkov/ngx-gallery": "^1.2.3",
+    "@microsoft/signalr": "^5.0.10",
     "@schematics/angular": "^9.1.0",
     "bootstrap": "4.1.1",
     "bootswatch": "^5.0.1",
